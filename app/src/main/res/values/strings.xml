@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Product Discovery</string>
+    <string name="edit_search_hitn">Nhập tên, mã sản phẩm</string>
+    <string name="act_ok">OK</string>
+    <string name="act_cancel">Cancel</string>
+    <string name="lbl_product_sku">Mã SP:</string>
+    <string name="lbl_product_status">Tạm hết hàng</string>
+    <string name="tab_product_description">Mô tả sản phẩm</string>
+    <string name="tab_product_info">Thông số kỹ thuật</string>
+    <string name="tab_product_price">So sánh giá</string>
+
+    <string name="tit_network_error">Internet error</string>
+    <string name="msg_network_error">Internet error.\nConnecting to the Internet ,Please</string>
+    <string name="tit_system_internal_error">System error</string>
+    <string name="msg_system_internal_error">Check system error,Please</string>
+
+    <string name="tit_notice">Product Discovery</string>
+    <string name="msg_no_data">Không có thông tin</string>
+    <string name="lbl_product_other">Sản phẩm cùng loại</string>
+</resources>

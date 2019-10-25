@@ -1,0 +1,145 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppDeailTheme" parent="AppTheme">
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="Theme.MaterialComponents.Light.DialogWhenLarge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_dialog</item>
+    </style>
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+    <style name="button">
+        <item name="android:backgroundTint">@color/grey_dark</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="toolbar">
+        <item name="android:background">@color/grey_light</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+    </style>
+
+    <style name="titleToolBar">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+    <style name="AppTheme.Text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
+    <style name="AppTheme.Text.Light" parent="AppTheme.Text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/sf_pro_text_light</item>
+    </style>
+
+    <style name="AppTheme.Text.Bold" parent="AppTheme.Text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_price</item>
+        <item name="android:fontFamily">@font/sf_pro_text_semi_bold</item>
+    </style>
+
+
+    <style name="AppTheme.Text.Error" parent="AppTheme.Text">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_error</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/sf_pro_text_light</item>
+        <item name="android:paddingStart">13dp</item>
+        <item name="android:paddingEnd">13dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minHeight">50dp</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/sf_pro_text_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/button_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="rippleColor">@color/ripple_dark</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.Button.Light" parent="AppTheme.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/button_light</item>
+        <item name="rippleColor">@color/ripple_light</item>
+    </style>
+
+    <style name="AppTheme.Button.Action" parent="AppTheme.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="DialogFullScreenTheme" parent="Theme.AppCompat.DialogWhenLarge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+    </style>
+
+    <style name="AnimSlideDownUpDialog">
+        <item name="android:windowEnterAnimation">@animator/slide_up</item>
+        <item name="android:windowExitAnimation">@animator/slide_down</item>
+    </style>
+
+    <style name="TabLayout.Simple" parent="Widget.Design.TabLayout">
+        <item name="tabTextColor">@color/text_grey</item>
+        <item name="tabSelectedTextColor">@color/text</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabTextAppearance">@style/AppTheme.Text</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">center</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="tabPaddingStart">5dp</item>
+        <item name="tabPaddingEnd">5dp</item>
+    </style>
+</resources>
