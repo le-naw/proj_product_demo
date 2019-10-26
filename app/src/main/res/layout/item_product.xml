@@ -17,46 +17,69 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/itemProroduct"
         android:layout_width="match_parent"
         android:layout_height="104dp"
-        android:background="#FFFFFF"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="4dp"
+        android:background="#FFFFFF">
 
-        <ImageView
-            android:id="@+id/ivProroduct"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/app_name"
-            app:loadImageUrl="@{image}"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemProroduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="12dp"/>
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/ivProroduct"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/app_name"
+                app:loadImageUrl="@{image}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"/>
 
-        <TextView
-            android:id="@+id/tvProductName"
-            style="@style/AppTheme.Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:text="@{product.name}"
-            app:layout_constraintStart_toEndOf="@+id/ivProroduct"
-            app:layout_constraintTop_toTopOf="@+id/ivProroduct"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/tvProductName"
+                style="@style/AppTheme.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="@{product.name}"
+                app:layout_constraintStart_toEndOf="@+id/ivProroduct"
+                app:layout_constraintTop_toTopOf="@+id/ivProroduct"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-        <TextView
-            android:id="@+id/tvProductPrice"
-            style="@style/AppTheme.Text.Bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="12dp"
-            app:textPrice="@{product.price.supplierSalePrice}"
-            app:layout_constraintStart_toEndOf="@+id/ivProroduct"
-            app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+            <TextView
+                android:id="@+id/tvProductPrice"
+                style="@style/AppTheme.Text.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="12dp"
+                app:textPrice="@{product.price.supplierSalePrice}"
+                app:layout_constraintStart_toEndOf="@+id/ivProroduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+                tools:text="123.444"/>
+
+            <TextView
+                style="@style/AppTheme.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                app:textPrice="@{product.price.sellPrice}"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"
+                android:background="@drawable/text_line"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@+id/ivProroduct"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductPrice"
+                tools:text="12.970.000đ"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

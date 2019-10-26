@@ -1,5 +1,6 @@
 package org.app.extensions
 
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -24,6 +25,19 @@ fun ImageView.loadImageUrl(url: String?) {
 
 @BindingAdapter("textPrice")
 fun TextView.textPrice(text: String?){
+    if (text == null || text.isEmpty() || text.isBlank()) {
+        setText("")
+        visibility = View.GONE
+    }
+    else {
+        val format = DecimalFormat( "#,###,###,##0" )
+        val tx_new = format.format(text.toFloat()).toString().replace(",",".")
+        setText(tx_new + "đ")
+    }
+}
+
+@BindingAdapter("textPriceNotHidden")
+fun TextView.textPriceNotHidden(text: String?){
     if (text == null || text.isEmpty() || text.isBlank()) setText("")
     else {
         val format = DecimalFormat( "#,###,###,##0" )

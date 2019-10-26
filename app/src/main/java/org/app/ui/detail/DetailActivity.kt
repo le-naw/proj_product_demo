@@ -45,7 +45,12 @@ class DetailActivity : AppCompatActivity() {
                 TabLayoutMediator(binding.tabProductImagePage as TabLayout, binding.productImagePage,
                     TabLayoutMediator.TabConfigurationStrategy { tab, position ->
                     }).attach()
+            var price = 0.0f
+            it.price?.supplierSalePrice?.let {
+                price = it.toFloat()
+            }
 
+            binding.footerView.totalPrice = ( price * viewModelDetail.numberPay.value!!.toFloat()).toString()
         })
 
         binding.viewpager.adapter = InfoPagerAdapter(this)
@@ -72,6 +77,8 @@ class DetailActivity : AppCompatActivity() {
                     binding.toolbarPrice = " "
                 }
             })
+
+        binding.footerView.viewModel = viewModelDetail
     }
 
     inner class InfoPagerAdapter(@NonNull fragmentActivity: FragmentActivity) :

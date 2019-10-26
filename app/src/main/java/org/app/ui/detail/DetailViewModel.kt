@@ -14,6 +14,7 @@ import org.app.demo.android.databinding.ActivityDetailBinding
 class DetailViewModel : ViewModel() {
     val loading: MutableLiveData<Boolean> = MutableLiveData(false)
     val productDetail: MutableLiveData<Product> = MutableLiveData()
+    var numberPay: MutableLiveData<Int> = MutableLiveData(2)
 
     fun getProductDetailById(context: Context?, sakeId: String, binding : ActivityDetailBinding) {
         loading.value = true

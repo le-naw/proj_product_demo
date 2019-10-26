@@ -35,7 +35,7 @@
             android:name="org.app.ui.detail.DetailActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize|adjustPan|adjustNothing"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppDeailTheme"/>
     </application>
 
