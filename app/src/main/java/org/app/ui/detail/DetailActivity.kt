@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import org.app.common.Constants
@@ -53,6 +54,24 @@ class DetailActivity : AppCompatActivity() {
                 val tabItems = MessagesTabItem.values()
                 tab.text = getStringResources(tabItems[position].titleRes)
             }).attach()
+
+        // Listener scroll appBarLayout
+        var scrollRange = -1
+        binding.appBarLayout.addOnOffsetChangedListener(
+
+            AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+                if (scrollRange == -1) {
+                    scrollRange = appBarLayout.totalScrollRange
+                }
+
+                if (scrollRange + verticalOffset == 0) {
+                    binding.toolbarTitle = viewModelDetail.productDetail.value?.name
+                    binding.toolbarPrice = viewModelDetail.productDetail.value?.price?.supplierSalePrice
+                } else {
+                    binding.toolbarTitle = " "
+                    binding.toolbarPrice = " "
+                }
+            })
     }
 
     inner class InfoPagerAdapter(@NonNull fragmentActivity: FragmentActivity) :

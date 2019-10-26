@@ -40,4 +40,5 @@
 
     <color name="colorSlideActive">#DF2020</color>
     <color name="colorSlideInActive">#EEF1F3</color>
+    <color name="colorNotifi">#F58400</color>
 </resources>
