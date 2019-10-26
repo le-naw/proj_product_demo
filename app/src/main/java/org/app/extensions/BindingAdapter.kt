@@ -33,6 +33,7 @@ fun TextView.textPrice(text: String?){
         val format = DecimalFormat( "#,###,###,##0" )
         val tx_new = format.format(text.toFloat()).toString().replace(",",".")
         setText(tx_new + "đ")
+        visibility = View.VISIBLE
     }
 }
 
